@@ -18,8 +18,8 @@ class AlterTableUsers extends Migration
          */
         Schema::table('users', function (Blueprint $table)
         {
-            $table->string('cpf')->default('NULL');
-            $table->date('birthdate');
+            $table->string('cpf')->default('');
+            $table->date('birthdate')->default('');
         });
     }
     /**
