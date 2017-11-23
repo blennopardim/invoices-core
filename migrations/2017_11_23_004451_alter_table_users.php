@@ -18,7 +18,6 @@ class AlterTableUsers extends Migration
          */
         Schema::table('users', function (Blueprint $table)
         {
-            $table->string('name');
             $table->string('cpf')->unique();
             $table->date('birthdate');
         });
@@ -31,7 +30,7 @@ class AlterTableUsers extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn(['name', 'cpf', 'birthdate']);
+            $table->dropColumn(['cpf', 'birthdate']);
         });
         
     }
