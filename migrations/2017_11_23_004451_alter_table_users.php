@@ -18,7 +18,7 @@ class AlterTableUsers extends Migration
          */
         Schema::table('users', function (Blueprint $table)
         {
-            $table->string('cpf')->unique();
+            $table->string('cpf');
             $table->date('birthdate');
         });
     }
